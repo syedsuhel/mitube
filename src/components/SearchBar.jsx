@@ -1,13 +1,13 @@
 import { useState } from "react";
 
-const SearchBar = (handleSearch) => {
+const SearchBar = ({handleSearch}) => {
   const[search,setSearch]=useState ("");
   return (
-    <form className="d-flex" style={barSizing} onSubmit={(e)=>{
+    <form className="d-flex " style={barSizing} onSubmit={(e)=>{
       e.preventDefault();
       handleSearch(search)
+           console.log("SEARCH VALUE:", search); 
     }}>
-      
       <input
         className="border border-secondary border-end rounded-start-pill ps-3 "
         type="text"

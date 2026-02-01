@@ -11,7 +11,7 @@ const Navbar = ({handleSearch}) => {
            <div className="d-flex align-items-center justify-content-center" style={navStyle}>
                <div style={logosty}></div>
            </div>
-            You<div className="text-danger">Tube <span style={{fontSize:'8px',color:'#000000'}}>mini</span></div>
+            Mi<div className="text-danger">Tube <span style={{fontSize:'8px',color:'#000000'}}>mini</span></div>
          </div>
         </a>
         
