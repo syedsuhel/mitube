@@ -25,23 +25,27 @@ const Home = () => {
       <div className="container mt-4">
         <div className="row">
           <div className="col-l-12 d-flex flex-wrap justify-content-center gap-4">
-            {searchResult.map((resultItem) => {
-              return (
-                <>
-                  <Link to={`/video/${resultItem.id.videoId}`} className="text-decoration-none"
-                  >
-                    <Tile
-                      key={resultItem.etag}
-                      src={resultItem.snippet.thumbnails.high.url}
-                      title={resultItem.snippet.title}
-                      channelTitle={resultItem.snippet.channelTitle}
-                      publishedAt={resultItem.snippet.publishedAt}
-                      publishTime={resultItem.snippet.publishTime}
-                    />
-                  </Link>
-                </>
-              ); 
-            })}
+            { searchResult.length > 0?(
+
+              searchResult.map((resultItem) => {
+                return (
+                  <>
+                    <Link to={`/video/${resultItem.id.videoId}`} className="text-decoration-none"
+                    >
+                      <Tile
+                        key={resultItem.etag}
+                        src={resultItem.snippet.thumbnails.high.url}
+                        title={resultItem.snippet.title}
+                        channelTitle={resultItem.snippet.channelTitle}
+                        publishedAt={resultItem.snippet.publishedAt}
+                        publishTime={resultItem.snippet.publishTime}
+                      />
+                    </Link>
+                  </>
+                ); 
+              })
+            ) : (<div className="fs-3 text-muted">Search for videos to see results here</div>
+            )}
           </div>
         </div>
       </div>
