@@ -22,22 +22,25 @@ const Home = () => {
   return (
     <>
       <Navbar handleSearch={handleSearch} />
-      <div className="container">
+      <div className="container mt-4">
         <div className="row">
-          <div className="offset-1 col-10">
+          <div className="col-l-12 d-flex flex-wrap justify-content-center gap-4">
             {searchResult.map((resultItem) => {
               return (
                 <>
-                  <Link to={`/video/${resultItem.id.videoId}`}>
+                  <Link to={`/video/${resultItem.id.videoId}`} className="text-decoration-none"
+                  >
                     <Tile
                       key={resultItem.etag}
-                      src={resultItem.snippet.thumbnails.medium.url}
+                      src={resultItem.snippet.thumbnails.high.url}
                       title={resultItem.snippet.title}
+                      channelTitle={resultItem.snippet.channelTitle}
                       publishedAt={resultItem.snippet.publishedAt}
+                      publishTime={resultItem.snippet.publishTime}
                     />
                   </Link>
                 </>
-              );
+              ); 
             })}
           </div>
         </div>

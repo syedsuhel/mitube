@@ -5,7 +5,7 @@ const baseApi = "https://www.googleapis.com/youtube/v3";
 
 const apiKey = import.meta.env.VITE_YOUTUBE_DATA_API_KEY;
 
-console.log("API KEY IS:", apiKey);
+// console.log("API KEY IS:", apiKey);
 
 
 
