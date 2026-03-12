@@ -1,5 +1,7 @@
 import { useState, useEffect } from "react";
 import { searchApiRandom } from "../api/apiservice";
+import { Link } from "react-router-dom";
+import Tile from "./Tile";
 
 const RandomSection = ({ category, title }) => {
   const [videos, setVideos] = useState([]);
@@ -77,7 +79,7 @@ const RandomSection = ({ category, title }) => {
               style={{ textDecoration: "none", color: "inherit" }}
               className="text-decoration-none"
             >
-              <HorizontalTile
+              <Tile
                 src={video.snippet.thumbnails.medium.url}
                 title={video.snippet.title}
                 channelTitle={video.snippet.channelTitle}
