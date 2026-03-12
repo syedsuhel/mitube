@@ -12,7 +12,7 @@ const apiKey = import.meta.env.VITE_YOUTUBE_DATA_API_KEY;
 export const searchApi=(searchStr)=>{
     console.log("searchApi called with searchStr :",searchStr);
     
-    return axios.get(`${baseApi}/search?part=snippet&q=${searchStr}&key=${apiKey}`);
+    return axios.get(`${baseApi}/search?part=snippet&q=${searchStr}&key=${apiKey}&type=video&maxResults=40`);
     
 };
 // export const searchApi=(searchStr)=>{

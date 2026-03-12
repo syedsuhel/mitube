@@ -1,7 +1,7 @@
 import { useParams } from "react-router-dom";
 import Player from "../components/Player";
 
-const VideoPage = ({ title, channelName, description, publishedAt }) => {
+const VideoPage = ({ title, description, publishedAt }) => {
   const { videoId } = useParams();
   return (
     <>
