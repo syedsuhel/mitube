@@ -31,9 +31,9 @@ const Home = () => {
                 return (
                   <>
                     <Link to={`/video/${resultItem.id.videoId}`} className="text-decoration-none"
+                      key={resultItem.etag}
                     >
                       <Tile
-                        key={resultItem.etag}
                         src={resultItem.snippet.thumbnails.high.url}
                         title={resultItem.snippet.title}
                         channelTitle={resultItem.snippet.channelTitle}

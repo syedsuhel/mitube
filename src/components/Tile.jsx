@@ -14,7 +14,7 @@ const Tile = ({ title, src, publishedAt, channelTitle, publishTime }) => {
                 {channelTitle}
               </p>
               <p className="card-text text-muted small mb-2">
-                <i className="fas fa-calendar-alt me-2"></i>
+                <i className="fas fa-calendar-alt me-2"></i>/
                 { new Date(publishedAt).toLocaleDateString()}-
                 {new Date(publishTime).toLocaleTimeString([], {
                   hour: "2-digit",

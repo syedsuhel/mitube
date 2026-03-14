@@ -15,6 +15,11 @@ export const searchApi=(searchStr)=>{
     return axios.get(`${baseApi}/search?part=snippet&q=${searchStr}&key=${apiKey}&type=video&maxResults=40`);
     
 };
+
+export const fetchVideoById=(videoId)=>{
+    console.log("fetchVideoById called with videoId :",videoId);
+    return axios.get(`${baseApi}/videos?part=snippet&id=${videoId}&key=${apiKey}`);
+}
 // export const searchApi=(searchStr)=>{
 //     return axios.get(`${baseApi}/search?part=snippet&q=${searchStr}&key=${import.meta.env.VITE_YOUTUBE_DATA_API_KEY}`);
     
