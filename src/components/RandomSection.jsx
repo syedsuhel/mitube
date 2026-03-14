@@ -84,6 +84,7 @@ const RandomSection = ({ category, title }) => {
                 title={video.snippet.title}
                 channelTitle={video.snippet.channelTitle}
                 publishedAt={video.snippet.publishedAt}
+                publishTime={video.snippet.publishTime}
               />
             </Link>
           </div>
