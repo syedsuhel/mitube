@@ -4,11 +4,11 @@ const Tile = ({ title, src, publishedAt, channelTitle, publishTime }) => {
       <div className="card">
         <div className="row" style={{ maxWidth: "20.5rem", maxHeight: "30rem" }}>
           <div className="col-md-12">
-            <img src={src} className="img-fluid rounded" style={thumbnailImgSty} />
+            <img src={src} className="img rounded" style={thumbnailImgSty} />
           </div>
           <div className="col-md-12">
             <div className="card-body">
-              <div className="card-title fs-5 fw-bold text-dark">{title.length > 40 ? title.substring(0,40) + "..." : title}</div>
+              <div className="card-title fs-6 fw-bold text-dark">{title.length > 40 ? title.substring(0,40) + "..." : title}</div>
               <p className="card-text text-muted small mb-2 ">
                 <i className="fas fa-user me-2"></i>
                 {channelTitle}
